@@ -1,0 +1,5 @@
+package commandpattern;
+
+public interface CosCump {
+    void execute();
+}
