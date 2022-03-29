@@ -1,0 +1,15 @@
+package State;
+
+public class StatePattern {
+    public static void main(String[] args) {
+        Stare stare = new Stare();
+
+        StartApp startApp= new StartApp();
+        startApp.doAction(stare);
+        System.out.println(stare.getApp().toString());
+
+        StopApp stopApp = new StopApp();
+        stopApp.doAction(stare);
+        System.out.println(stare.getApp().toString());
+    }
+}
