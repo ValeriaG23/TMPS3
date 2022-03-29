@@ -1,0 +1,11 @@
+package Mediator;
+
+public class MedPattern {
+    public static void main(String[] args){
+        Utilizator valeria = new Utilizator("Valeria");
+        Utilizator ecaterina =new Utilizator("Ecaterina");
+
+        valeria.expediazaMess("Buna, ce mai faci?");
+        ecaterina.expediazaMess("Buna. Bine, tu?");
+    }
+}
