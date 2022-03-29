@@ -1,0 +1,12 @@
+package commandpattern;
+
+public class Achita implements CosCump {
+    private Stoc alphaStoc;
+    public Achita(Stoc alphaStoc){
+        this.alphaStoc=alphaStoc;
+    }
+    @Override
+    public void execute() {
+        alphaStoc.achitare();
+    }
+}
