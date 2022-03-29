@@ -1,0 +1,25 @@
+package chainResp;
+
+
+public abstract class Autentificarea {
+    public static int Succes = 1;
+    public static int Incarcare = 2;
+    public static int Eroare = 3;
+    
+    protected int pas;
+    protected Autentificarea nextAutentif;
+    public void setNextAutentif(Autentificarea nextAutentif){
+        this.nextAutentif=nextAutentif;
+    }
+    public void Mesaj(int pas, String mesaj){
+        if(this.pas <=pas){
+            write(mesaj);
+        }
+        if(nextAutentif!=null){
+            nextAutentif.Mesaj(pas, mesaj);
+        }
+    }
+
+    abstract protected void write(String message);
+
+}
