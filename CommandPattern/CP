@@ -1,0 +1,16 @@
+package commandpattern;
+
+public class CommandPatern {
+    public static void main(String[] args){
+        Stoc alphaStoc = new Stoc();
+
+        Adauga adauga = new Adauga(alphaStoc);
+        Achita achitare = new Achita(alphaStoc);
+
+        Marfa marfa = new Marfa();
+        marfa.clickCos(adauga);
+        marfa.clickCos(achitare);
+
+        marfa.plaseazaCosCump();
+    }
+}
