@@ -1,0 +1,12 @@
+package State;
+
+public class StartApp implements App{
+    @Override
+    public void doAction(Stare stare) {
+        System.out.println("Aplicatia se afla in etapa de lansare");
+        stare.setApp(this);
+    }
+    public String toString(){
+        return "Start app";
+    }
+}
