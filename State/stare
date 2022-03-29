@@ -1,0 +1,14 @@
+package State;
+
+public class Stare {
+    private App app;
+    public Stare(){
+        app = null;
+    }
+    public void setApp(App app){
+        this.app=app;
+    }
+    public App getApp(){
+        return app;
+    }
+}
