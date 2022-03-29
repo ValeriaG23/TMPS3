@@ -1,0 +1,12 @@
+package chainResp;
+
+public class Eroare extends Autentificarea{
+    public Eroare(int pas){
+        this.pas=pas;
+    }
+
+    @Override
+    protected void write(String mesaj) {
+        System.out.println("A aparut o eroare" + mesaj);
+    }
+}
