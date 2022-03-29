@@ -1,0 +1,18 @@
+package commandpattern;
+import java.util.ArrayList;
+import java.util.List;
+public class Marfa {
+    private List<CosCump> cosCumpList = new ArrayList<CosCump>();
+
+    public void clickCos(CosCump cosCump){
+        cosCumpList.add(cosCump);
+    }
+    public void plaseazaCosCump(){
+        for(CosCump cosCump:cosCumpList){
+            cosCump.execute();
+        }
+        cosCumpList.clear();
+    }
+
+
+}
