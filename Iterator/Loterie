@@ -1,0 +1,30 @@
+package iterator;
+
+public class Loterie implements Bloc{
+    public String nume[]={"Loredana", "Andrei", "Alexandrina", "Daniel", "Laurentiu"};
+
+    @Override
+    public Iterare getIterare() {
+        return new IteratorNume();
+    }
+    private class IteratorNume implements Iterare{
+        int indexare;
+
+        @Override
+        public boolean hasNext() {
+            if (indexare < nume.length) {
+                return true;
+
+            } return false;
+        }
+
+        @Override
+        public Object next() {
+            if(this.hasNext()){
+                return nume[indexare ++];
+            }
+
+            return null;
+        }
+    }
+}
