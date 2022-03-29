@@ -1,0 +1,25 @@
+package chainResp;
+
+public class CRPattern {
+    private static Autentificarea getChainAutentif(){
+        Autentificarea autentconsol = new AutentifConsola(Autentificarea.Succes);
+        Autentificarea eroare = new Eroare(Autentificarea.Eroare);
+        Autentificarea inlaterorii = new InlatEroare(Autentificarea.Incarcare);
+
+        eroare.setNextAutentif(inlaterorii);
+        inlaterorii.setNextAutentif(autentconsol);
+
+        return eroare;
+    }
+
+    public static void main(String[] args){
+        Autentificarea autentSir = getChainAutentif();
+
+        autentSir.Mesaj(Autentificarea.Succes,
+                "Info aditionala");
+        autentSir.Mesaj(Autentificarea.Incarcare,
+                "Info aditionala");
+        autentSir.Mesaj(Autentificarea.Eroare,
+                "Info aditionala");
+    }
+}
