@@ -1,0 +1,12 @@
+package chainResp;
+
+public class AutentifConsola extends Autentificarea{
+   public AutentifConsola(int pas){
+       this.pas=pas;
+   }
+
+    @Override
+    protected void write(String mesaj) {
+        System.out.println("Autentificarea din Consola" + mesaj);
+    }
+}
