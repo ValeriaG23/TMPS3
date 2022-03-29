@@ -1,0 +1,12 @@
+package iterator;
+
+public class IterPattern {
+    public static void main(String[] args){
+        Loterie loterie = new Loterie();
+
+        for (Iterare it = loterie.getIterare(); it.hasNext();){
+            String nume = (String)it.next();
+            System.out.println("Nume: " + nume);
+        }
+    }
+}
