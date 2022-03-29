@@ -1,0 +1,11 @@
+package chainResp;
+
+public class InlatEroare extends Autentificarea{
+   public InlatEroare(int pas){
+       this.pas=pas;
+   }
+    @Override
+    protected void write(String mesaj) {
+        System.out.println("Inlaturarea erorii a derulat cu succes" + mesaj);
+    }
+}
