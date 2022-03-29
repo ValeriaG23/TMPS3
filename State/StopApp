@@ -1,0 +1,12 @@
+package State;
+
+public class StopApp implements App{
+    @Override
+    public void doAction(Stare stare) {
+        System.out.println("Aplicatia se afla in etapa de oprire");
+        stare.setApp(this);
+    }
+    public String toString(){
+        return "Stop app";
+    }
+}
