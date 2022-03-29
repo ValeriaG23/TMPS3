@@ -1,0 +1,12 @@
+package commandpattern;
+
+public class Adauga implements CosCump{
+    private Stoc alphaStoc;
+    public Adauga(Stoc alphaStoc){
+        this.alphaStoc=alphaStoc;
+    }
+    @Override
+    public void execute() {
+        alphaStoc.adauga();
+    }
+}
