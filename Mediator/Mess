@@ -1,0 +1,9 @@
+package Mediator;
+
+import java.util.Date;
+
+public class Messenger {
+    public static void accesMesaj(Utilizator utilizator, String mesaj){
+        System.out.println(new Date().toString()+"[" + utilizator.getName()+"]:"+mesaj);
+    }
+}
