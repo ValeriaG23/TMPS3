@@ -1,0 +1,17 @@
+package commandpattern;
+
+public class Stoc {
+    private String nume ="Alpha";
+    private int cantitate = 5;
+
+    public void adauga(){
+        System.out.println("Stoc [Nume:"+nume+
+                ",Cantitate:" + cantitate +"]" );
+    }
+    public void achitare(){
+        System.out.println("Stoc [Nume:"+nume+
+                ",Cantitate:" + cantitate +"] card");
+    }
+
+
+}
